@@ -19,7 +19,7 @@ public class User {
 	private String email;
 	private String password;
 	private Set<Login> loginset = new HashSet<Login>();
-	private Set<List> listset = new HashSet<List>();
+	private Set<Lists> listset = new HashSet<Lists>();
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public String getUsername() {
@@ -50,10 +50,10 @@ public class User {
 	}
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="useranme")
-	public Set<List> getListset() {
+	public Set<Lists> getListset() {
 		return listset;
 	}
-	public void setListset(Set<List> listset) {
+	public void setListset(Set<Lists> listset) {
 		this.listset = listset;
 	}
 	

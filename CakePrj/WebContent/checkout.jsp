@@ -12,14 +12,14 @@
 <meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //Custom Theme files -->
-<link href="static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="static/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="${ctx}/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="${ctx}/static/css/style.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
-<script src="static/js/jquery.min.js"></script>
-<script type="text/javascript" src="static/js/bootstrap-3.1.1.min.js"></script>
+<script src="${ctx}/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/bootstrap-3.1.1.min.js"></script>
 <!-- //js -->
 <!-- cart -->
-<script src="static/js/simpleCart.min.js"> </script>
+<script src="${ctx}/static/js/simpleCart.min.js"> </script>
 <!-- cart -->
 </head>
 <body>
@@ -39,7 +39,7 @@
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="index.html" class="active">Home</a></li>
+						<li><a href="${ctx}/index.jsp" class="active">Home</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Birthday<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
@@ -290,6 +290,40 @@
 	<div class="cart-items">
 		<div class="container">
 			<h2>My Shopping Cart(3)</h2>
+			<c:forEach var="ors" items="${orders }" varStatus="status">
+				<script>$(document).ready(function(c) {
+					var index1 = ".cart-header${status.index}";
+					var index2 = ".close${status.index}";
+					$(index2).on('click', function(c){
+						$(index1).fadeOut('slow', function(c){
+							$(index1).remove();
+						});
+						});	  
+					});
+				</script>
+				<div class="cart-header${status.index}">
+					<div class="close${status.index}"> </div>
+					<div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src=${ctx}/${ors.imgsrc} class="img-responsive" alt="">
+						</div>
+						<div class="cart-item-info">
+							<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+							<ul class="qty">
+								<li><p>Min. order value:</p></li>
+								<li><p>FREE delivery</p></li>
+							</ul>
+							<div class="delivery">
+								<p>Service Charges : $10.00</p>
+								<span>Delivered in 1-1:30 hours</span>
+								<div class="clearfix"></div>
+							</div>	
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</c:forEach>
+			<input type="submit" value="结账" />
 			<script>$(document).ready(function(c) {
 				$('.close1').on('click', function(c){
 					$('.cart-header').fadeOut('slow', function(c){
@@ -423,10 +457,10 @@
 				<div class="col-md-3 footer-grid icons">
 					<h4>Connect with Us</h4>
 					<ul>
-						<li><a href="#"><img src="static/images/i1.png" alt=""/>Follow us on Facebook</a></li>
-						<li><a href="#"><img src="static/images/i2.png" alt=""/>Follow us on Twitter</a></li>
-						<li><a href="#"><img src="static/images/i3.png" alt=""/>Follow us on Google-plus</a></li>
-						<li><a href="#"><img src="static/images/i4.png" alt=""/>Follow us on Pinterest</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i1.png" alt=""/>Follow us on Facebook</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i2.png" alt=""/>Follow us on Twitter</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i3.png" alt=""/>Follow us on Google-plus</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i4.png" alt=""/>Follow us on Pinterest</a></li>
 					</div>
 				</div>
 				<div class="clearfix"></div>

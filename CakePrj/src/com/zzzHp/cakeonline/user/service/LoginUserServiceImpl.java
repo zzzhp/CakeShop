@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional(readOnly=true)
+@Transactional(readOnly=false)
 public class LoginUserServiceImpl {
 	@Resource
 	private LoginUserDaoImpl LoginUserDaoImpl;

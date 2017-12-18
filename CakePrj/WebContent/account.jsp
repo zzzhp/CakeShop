@@ -12,14 +12,14 @@
 <meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //Custom Theme files -->
-<link href="static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="static/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="${ctx}/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="${ctx}/static/css/style.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
-<script src="static/js/jquery.min.js"></script>
-<script type="text/javascript" src="static/js/bootstrap-3.1.1.min.js"></script>
+<script src="${ctx}/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/bootstrap-3.1.1.min.js"></script>
 <!-- //js -->	
 <!-- cart -->
-<script src="static/simpleCart.min.js"> </script>
+<script src="${ctx}/static/simpleCart.min.js"> </script>
 <!-- cart -->
 </head>
 <body>
@@ -376,10 +376,10 @@
 				<div class="col-md-3 footer-grid icons">
 					<h4>Connect with Us</h4>
 					<ul>
-						<li><a href="#"><img src="static/images/i1.png" alt=""/>Follow us on Facebook</a></li>
-						<li><a href="#"><img src="static/images/i2.png" alt=""/>Follow us on Twitter</a></li>
-						<li><a href="#"><img src="static/images/i3.png" alt=""/>Follow us on Google-plus</a></li>
-						<li><a href="#"><img src="static/images/i4.png" alt=""/>Follow us on Pinterest</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i1.png" alt=""/>Follow us on Facebook</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i2.png" alt=""/>Follow us on Twitter</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i3.png" alt=""/>Follow us on Google-plus</a></li>
+						<li><a href="#"><img src="${ctx}/static/images/i4.png" alt=""/>Follow us on Pinterest</a></li>
 					</div>
 				</div>
 				<div class="clearfix"></div>

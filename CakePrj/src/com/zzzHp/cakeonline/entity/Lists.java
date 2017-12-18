@@ -8,12 +8,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="list")
-public class List {
+public class Lists {
 	private int listid;
 	private String username;
 	private int cakeid;
+	private int size;
 	private int count;
-	private double total;	
+	private double total;
+	private String imgsrc;	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getListid() {
@@ -34,6 +36,12 @@ public class List {
 	public void setCakeid(int cakeid) {
 		this.cakeid = cakeid;
 	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
 	public int getCount() {
 		return count;
 	}
@@ -45,5 +53,11 @@ public class List {
 	}
 	public void setTotal(double total) {
 		this.total = total;
+	}
+	public String getImgsrc() {
+		return imgsrc;
+	}
+	public void setImgsrc(String imgsrc) {
+		this.imgsrc = imgsrc;
 	}
 }

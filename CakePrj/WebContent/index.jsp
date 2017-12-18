@@ -242,8 +242,8 @@
 				<div class="header-right search-box">
 					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
 					<div class="search">
-						<form class="navbar-form">
-							<input type="text" class="form-control">
+						<form class="navbar-form" action="list">
+							<input type="text" class="form-control"  name="search">
 							<button type="submit" class="btn btn-default" aria-label="Left Align">
 								Search
 							</button>
